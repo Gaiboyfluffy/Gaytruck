@@ -1,0 +1,11 @@
+RegisterNetEvent("Trunk")
+AddEventHandler("Trunk", function()
+	local Veh = GetVehiclePedIsUsing(GetPlayerPed(-1))
+	SetVehicleDoorOpen(Veh, 5, false, false)
+end)
+
+RegisterNetEvent("TrunkClose")
+AddEventHandler("TrunkClose", function()
+	local Veh = GetVehiclePedIsUsing(GetPlayerPed(-1))
+	SetVehicleDoorShut(Veh, 5, false)
+end)
